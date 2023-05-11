@@ -28,9 +28,9 @@ url="https://www.amazon.com/dp/B075CYMYK6?psc=1&ref_=cm_sw_r_cp_ud_ct_FM9M699VKH
 if(product_price<200):
     with smtplib.SMTP('smtp.gmail.com', port=587) as connection:
         connection.starttls()
-        result = connection.login('aditya.sharma16062016@gmail.com', 'epjbxxvikesvwrwi')
+        result = connection.login(YOUR_MAIL, YOUR_PSWRD)
         connection.sendmail(
-            from_addr= 'aditya.sharma16062016@gmail.com',
+            from_addr= YOUR_MAIL,
             to_addrs= mail,
             msg=f"Subject:Amazon Price Alert!\n\n{message}\n{url}".encode("utf-8")
         )
